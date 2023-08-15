@@ -49,3 +49,12 @@ variable "INSTANCE_NAME" {
     Sonar = "SonarServer"
   }
 }
+
+variable "PROVISIONING_SCRIPT" {
+  type = "map"
+  default {
+    Jenkins = "./provision/jenkins.sh"
+    Nexus = "./provision/nexus.sh"
+    Sonar = "./provision/sonar.sh"
+  }
+}
