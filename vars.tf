@@ -14,6 +14,18 @@ variable "PUBLIC_KEY_NAME" {
   default = "key.pub"
 }
 
+variable "PRIVATE_KEY_PATH" {
+  default = "key"
+}
+
+variable "LOGIN_USER" {
+  type = "map"
+  default {
+  Ubuntu = "ec2-user"
+  CentOS = "centos"
+  }
+}
+
 variable "SG_NAME" {
   type = "map"
   default {
